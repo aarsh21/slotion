@@ -34,3 +34,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 app/(marketing)/_components
+app/(main)/_components
