@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { Toaster } from "sonner";
 import { Inter } from "next/font/google";
-import { dark } from '@clerk/themes';
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ConvexClientProvider } from "@/components/providers/convex-provider";
 import { cn } from "@/lib/utils";
@@ -34,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(inter.className,"no-scrollbar")}>
+      <body className={cn(inter.className, "no-scrollbar")}>
         <ConvexClientProvider>
           <ThemeProvider
             attribute="class"
@@ -43,6 +43,7 @@ export default function RootLayout({
             disableTransitionOnChange
             storageKey="Slotion-theme"
           >
+            <Toaster position="bottom-right" />
             {children}
           </ThemeProvider>
         </ConvexClientProvider>
